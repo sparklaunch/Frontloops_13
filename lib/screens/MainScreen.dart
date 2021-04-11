@@ -15,6 +15,9 @@ class MainScreen extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
             TabMenu(),
+            SizedBox(
+              height: 30.0,
+            ),
             TabContent(),
           ],
         ),
