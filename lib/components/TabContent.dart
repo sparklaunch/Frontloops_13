@@ -1,6 +1,7 @@
 import "package:flutter/material.dart";
 
 import "package:frontloops_13/components/FoodTitle.dart";
+import "package:frontloops_13/components/FoodList.dart";
 
 class TabContent extends StatelessWidget {
   @override
@@ -20,6 +21,7 @@ class TabContent extends StatelessWidget {
       child: Column(
         children: [
           FoodTitle(),
+          FoodList(),
         ],
       ),
     );
