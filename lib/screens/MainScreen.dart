@@ -3,12 +3,14 @@ import "package:flutter/material.dart";
 import "package:frontloops_13/components/TabMenu.dart";
 import "package:frontloops_13/components/TabContent.dart";
 
+import "package:frontloops_13/utilities/constants.dart";
+
 class MainScreen extends StatelessWidget {
   static const String route = "/";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromRGBO(75, 75, 114, 1),
+      backgroundColor: kBackgroundColor,
       body: Container(
         alignment: Alignment.center,
         child: Column(

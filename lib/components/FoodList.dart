@@ -1,7 +1,11 @@
 import "package:flutter/material.dart";
 
+import "package:frontloops_13/components/ListViewDivider.dart";
+
 import "package:frontloops_13/utilities/Food.dart";
 import "package:frontloops_13/utilities/FoodHelper.dart";
+
+import "package:frontloops_13/utilities/constants.dart";
 
 class FoodList extends StatelessWidget {
   List<Container> getFoodList() {
@@ -10,29 +14,17 @@ class FoodList extends StatelessWidget {
     for (Food food in foods) {
       foodCards.add(
         Container(
-          padding: EdgeInsets.all(
-            24.0,
-          ),
+          padding: kFoodItemPadding,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
                 food.getName(),
-                style: TextStyle(
-                  color: Color.fromRGBO(160, 160, 160, 1),
-                  fontSize: 22.0,
-                  fontWeight: FontWeight.bold,
-                  letterSpacing: -1,
-                ),
+                style: kFoodItemTextStyle,
               ),
               Text(
                 food.getQuantity().toString(),
-                style: TextStyle(
-                  color: Color.fromRGBO(160, 160, 160, 1),
-                  fontSize: 22.0,
-                  fontWeight: FontWeight.bold,
-                  letterSpacing: -1,
-                ),
+                style: kFoodItemTextStyle,
               ),
             ],
           ),
@@ -56,11 +48,7 @@ class FoodList extends StatelessWidget {
             return foods[index];
           },
           separatorBuilder: (BuildContext context, int index) {
-            return Divider(
-              thickness: 2.0,
-              height: 2.0,
-              color: Color.fromRGBO(237, 237, 237, 1),
-            );
+            return ListViewDivider();
           }),
     );
   }

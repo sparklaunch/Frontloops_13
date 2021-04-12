@@ -1,32 +1,20 @@
 import "package:flutter/material.dart";
 
+import "package:frontloops_13/utilities/constants.dart";
+
 class FoodTitle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.fromLTRB(30.0, 100.0, 30.0, 30.0),
-      decoration: BoxDecoration(
-        image: DecorationImage(
-          image: AssetImage("./assets/images/food.jpg"),
-          fit: BoxFit.cover,
-          colorFilter: ColorFilter.mode(
-            Colors.black26,
-            BlendMode.darken,
-          ),
-        ),
-      ),
+      padding: kFoodTitlePadding,
+      decoration: kFoodTitleBoxDecoration,
       child: Column(
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
             "Food",
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 32.0,
-              fontWeight: FontWeight.bold,
-              letterSpacing: -1,
-            ),
+            style: kFoodTitleTextStyle,
           ),
           SizedBox(
             height: 10.0,
@@ -39,12 +27,7 @@ class FoodTitle extends StatelessWidget {
               ),
               Text(
                 "Madrid",
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 18.0,
-                  fontWeight: FontWeight.bold,
-                  letterSpacing: -1,
-                ),
+                style: kFoodSubtitleTextStyle,
               ),
             ],
           ),
